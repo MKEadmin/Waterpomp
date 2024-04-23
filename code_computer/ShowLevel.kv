@@ -1,0 +1,88 @@
+#:import utils kivy.utils
+<PrullenbakWidget>:
+    id: main_win
+    spacing: 10    
+    h1 : 100
+    h2 : 0       
+    color1 : "#ffff00"
+    color2 : "#ff0000"  
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Prullebakken.jpg' 
+    FloatLayout:  
+        Button: 
+            id: btn_main     
+            size: (500, 100)
+            text: 'Update Now'
+            on_press: root.button_pressed()
+            size_hint_y : None
+            size_hint_x : None
+            pos_hint: {'top': 1, 'center_x':0.5} 
+        MDLabel:
+            id: lbl_column_2
+            text: '-1'
+            text_color:root.color2
+            color: root.color2
+            size_hint_y : None
+            size_hint_x : None
+            pos_hint :{'top': 0.95, 'center_x':0.50}
+        MDLabel:
+            id: lbl_column_1
+            text: '-1'
+            text_color:root.color1
+            color: root.color1
+            size_hint_y : None
+            size_hint_x : None
+            pos_hint: {'top': 0.95, 'center_x':0.60}
+        MDProgressBar:
+            orientation: "vertical"
+            min:0
+            max:100
+            value:root.h2
+            color:root.color2
+            back_color:"#000000"
+            size_hint_y : None
+            size_hint_x : None
+            pos_hint: {'top': 0.74, 'center_x':0.20}
+            height:dp(310)  
+            width:dp(50)
+        MDProgressBar:
+            orientation: "vertical"
+            min:0
+            max:100
+            value:root.h1
+            color:root.color1
+            back_color:"#000000"   
+            height:dp(310)
+            width:dp(50)
+            size_hint_y : None
+            size_hint_x : None
+            pos_hint: {'top': 0.74, 'center_x':0.89}
+        MDLabel:
+            id: lbl_main
+            text: 'Smart Technology'
+            size: self.texture_size
+            color: 0,0,0,1
+            size_hint_y : None
+            size_hint_x : None
+            size: (600, 100)
+            pos_hint: {'top': 0.20, 'center_x':0.35}
+        MDLabel:
+            id  : lbl_last_update
+            text: 'last update'
+            color: 0,0,0,1
+            size_hint_y : None
+            size_hint_x : None
+            pos_hint: {'top': 0.20, 'center_x':0.65}
+            size: (600, 100)
+        MDLabel:
+            id: lbl_lastUpdate
+            text: '31 januari 2023 23:09:39'
+            color: 0,0,0,1
+            size_hint_y : None
+            size_hint_x : None
+            pos_hint: {'top': 0.20, 'center_x':0.85}
+            size: (600, 100)           
+                 
