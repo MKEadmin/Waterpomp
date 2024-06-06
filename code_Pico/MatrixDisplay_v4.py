@@ -70,7 +70,6 @@ if "__main__" == __name__:
         while True:
             showCharacter(ARROW_D,  0, -32 + y)
             showCharacter(ARROW_U, 16, -y)
-            md.display.show()
             sleep(0.1)
             y += 1
             if y == 32:
